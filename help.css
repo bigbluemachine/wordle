@@ -1,0 +1,61 @@
+.help-copyright::before { content: "\00A9  2022"; }
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding-top: 50px;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  background-color: #ffffff;
+  box-shadow: 3px 3px #bbbbbb;
+  margin: auto;
+  padding: 0 22px 10px;
+  border-radius: 5px;
+  width: 80%;
+}
+
+.modal-content p { margin-top: 0; }
+
+.modal-content ul {
+  padding-left: 0;
+  margin-left: 20px;
+  list-style-type: square;
+}
+
+.modal-close {
+  position: relative;
+  left: calc(100% - 3px);
+  top: -3px;
+  color: #aaaaaa;
+  font-size: 30px;
+  font-weight: bold;
+  transition: 300ms;
+}
+
+.modal-close:hover, .modal-close:focus {
+  color: #000000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#help .modal-content { max-width: 500px; }
+.help-green { font-weight: bold; color: #22bb00; }
+.help-orange { font-weight: bold; color: #ddbb33; }
+.help-grey { font-weight: bold; color: #888888; }
+.help-blue { font-weight: bold; color: #000099; }
+
+#share .modal-content { max-width: 340px; }
+#share-result { margin-left: 10px; }
+#share-seed { white-space: pre; }
+#share-help {
+  color: #888888;
+  font-style: italic;
+}

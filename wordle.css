@@ -1,0 +1,108 @@
+#board * { margin: 0; padding: 0; }
+#board table {
+  border-spacing: 4px;
+  margin-top: 5px;
+  user-select: none;
+}
+.cell {
+  border-width: 4px;
+  border-style: solid;
+  border-color: #aaaaaa;
+  border-radius: 5px;
+  width: 45px;
+  height: 45px;
+  line-height: 47px;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  color: #000000;
+  transition: all 200ms;
+}
+.selected {
+  border-color: #000000 !important;
+}
+.invalid {
+  border-color: #ff0000 !important;
+}
+.green {
+  background-color: #99dd66 !important;
+  border-color: #008800 !important;
+}
+.orange {
+  background-color: #ffbb33 !important;
+  border-color: #996600 !important;
+}
+.grey {
+  background-color: #bbbbbb !important;
+  border-color: #888888 !important;
+}
+.highlight {
+  background-color: #bbbbbb !important;
+  border-color: #000099 !important;
+}
+.congrats {
+  background-color: #99dd66 !important;
+  border-color: #114411 !important;
+}
+#status {
+  white-space: pre;
+}
+.status-blue {
+  color: #000099;
+}
+.status-red {
+  color: #990000;
+}
+.status-green {
+  color: #009900;
+}
+a:link    { color: #0000ff; text-decoration: none; }
+a:visited { color: #0000ff; text-decoration: none; }
+a:hover   { color: #0000ff; text-decoration: underline; }
+a:active  { color: #000066; text-decoration: underline; }
+#keyboard {
+  margin-top: 5px;
+  white-space: nowrap;
+  user-select: none;
+}
+.key {
+  background-color: #cccccc;
+  border: 2px solid rgba(0,0,0,0);
+  border-radius: 5px;
+  display: inline-block;
+  padding: 9px;
+  margin: 2px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 100ms;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent;
+}
+.key:active {
+  background-color: #eeeeee !important;
+  transition: 50ms;
+}
+.key-disabled {
+  pointer-events: none;
+}
+#key-back {
+  background-color: #aaaadd;
+  font-weight: bold;
+}
+#key-enter {
+  background-color: #aaaadd;
+  font-weight: bold;
+}
+.key-green {
+  background-color: #99dd66 !important;
+}
+.key-grey {
+  background-color: #aaaaaa !important;
+}
+.key-hint {
+  border-color: #000099;
+}
+.copyright {
+  margin-bottom: 5px;
+}

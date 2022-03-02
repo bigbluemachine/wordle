@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>wordle!</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Welcome to Wordle!">
+  <meta name="keywords" content="wordle, word, guessing, game">
+  <meta name="author" content="Jeremy Lee">
+  <link rel="icon" href="../../resources/favicon.ico" />
+  <link rel="stylesheet" type="text/css" href="../../resources/minimal.css" />
+  <link rel="stylesheet" type="text/css" href="wordle.css" />
+  <link rel="stylesheet" type="text/css" href="help.css" />
+
+  <script src="dict.js"></script>
+  <script src="freq.js"></script>
+  <script src="random.js"></script>
+  <script src="main.js"></script>
+</head>
+
+<body>
+  <div id="help" class="modal">
+    <div class="modal-content">
+      <span id="close-help" class="modal-close">&times;</span>
+      <p>Guess the word in six tries or fewer. Each guess must be a valid word. After you make a guess, each letter is given a color:</p>
+      <ul>
+        <li><span class="help-green">Green</span> &mdash; in the correct location</li>
+        <li><span class="help-orange">Orange</span> &mdash; in a different location</li>
+        <li><span class="help-grey">Grey</span> &mdash; not in the word (but watch out for repeats!)</li>
+      </ul>
+      <p>When all except <span class="help-grey">one</span> letter is correct, then letters that can go there will be <span class="help-blue">highlighted</span> on the keyboard.</p>
+      <p>Unlike the official <a href="https://www.powerlanguage.co.uk/wordle/">Wordle</a> game, words are randomly selected from the <a href="https://scrabbleplayers.org/w/SOWPODS">Scrabble word list</a>. Hence some of the words may be... interesting.</p>
+      <p>After you finish a game, there will be a link to the dictionary entry for the word &mdash; go have a look!</p>
+      <p>Play a random word, or make a puzzle with a specific word by entering a seed. You can send any puzzle to a friend by giving them the link.</p>
+      <p>Have fun!</p>
+      <div class="help-copyright center grey9"></div>
+    </div>
+  </div>
+  <div id="share" class="modal">
+    <div class="modal-content">
+      <span id="close-share" class="modal-close">&times;</span>
+      <p id="share-msg"></p>
+      <div id="share-result"></div>
+      <p><span id="share-link"></span> <span id="share-help">(right click -> copy link)<span></p>
+    </div>
+  </div>
+  <!-- end modals -->
+  <div class="p">
+    Welcome to Wordle! <a id="open-help" href="javascript:void(0)">[what's this?]</a>
+  </div>
+  <div class="p">
+    <div id="status"></div>
+  </div>
+  <div>
+    <button id="gen-rand">Play random</button>
+    <button id="gen-seed">Use seed</button>
+    <input id="seed" type="text" size="13" maxlength="256" placeholder="enter seed..." />
+  </div>
+  <div id="board"></div>
+  <div id="keyboard"></div>
+</body>
+</html>
